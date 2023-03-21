@@ -102,3 +102,16 @@ bench-new: benchmarks
 .PHONY: benchmark
 benchmark: bench-old bench-new
 	@benchstat benchmarks/old.out benchmarks/new.out
+
+.PHONY: internal/prometheus
+internal/prometheus: ## Ensure latest prometheus parser package is synced.
+	rm -rf internal/prometheus
+	rm -rf tmp/prometheus
+	git clone --depth 1 https://github.com/prometheus/prometheus/ tmp/prometheus
+	mkdir -p internal/prometheus/
+	cp -R tmp/prometheus/promql/parser internal/prometheus
+	find . -type f -exec sed -i 's/github.com\/prometheus\/prometheus\/parser/github.com\/thanos-community\/promql-engine\/internal\/prometheus\/parser/g' {} +
+	rm -rf tmp/prometheus
+
+
+# "github.com/thanos-community/promql-engine/internal/prometheus/parser"
