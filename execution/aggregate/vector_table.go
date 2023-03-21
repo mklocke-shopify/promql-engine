@@ -10,7 +10,7 @@ import (
 
 	"github.com/efficientgo/core/errors"
 
-	"github.com/prometheus/prometheus/promql/parser"
+	"github.com/thanos-community/promql-engine/internal/prometheus/parser"
 	"gonum.org/v1/gonum/floats"
 
 	"github.com/thanos-community/promql-engine/execution/model"

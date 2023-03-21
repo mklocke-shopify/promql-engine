@@ -12,7 +12,7 @@ import (
 	"github.com/efficientgo/core/testutil"
 	"github.com/prometheus/prometheus/model/labels"
 	"github.com/prometheus/prometheus/promql"
-	"github.com/prometheus/prometheus/promql/parser"
+	"github.com/thanos-community/promql-engine/internal/prometheus/parser"
 )
 
 func TestRangeQuery(t *testing.T) {

@@ -13,7 +13,7 @@ import (
 
 	"github.com/efficientgo/core/errors"
 	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/promql/parser"
+	"github.com/thanos-community/promql-engine/internal/prometheus/parser"
 	"golang.org/x/exp/slices"
 
 	"github.com/thanos-community/promql-engine/execution/model"

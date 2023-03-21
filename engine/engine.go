@@ -24,9 +24,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/prometheus/promql"
-	"github.com/prometheus/prometheus/promql/parser"
 	"github.com/prometheus/prometheus/storage"
 	"github.com/prometheus/prometheus/util/stats"
+	"github.com/thanos-community/promql-engine/internal/prometheus/parser"
 
 	"github.com/thanos-community/promql-engine/execution"
 	"github.com/thanos-community/promql-engine/execution/model"

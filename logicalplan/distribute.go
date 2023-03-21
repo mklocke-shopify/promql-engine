@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/prometheus/prometheus/promql/parser"
+	"github.com/thanos-community/promql-engine/internal/prometheus/parser"
 
 	"github.com/thanos-community/promql-engine/api"
 )
